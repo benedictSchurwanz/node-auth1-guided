@@ -53,7 +53,9 @@ router.get('/logout', async (req, res, next) => {
     if (req.session.user) {
       req.session.destroy((err) => {
         if (err) {
-          res.json('')
+          res.json('you cannot leave, sorry!')
+        } else {
+          res.json('goodbye')
         }
       })
     } else {
