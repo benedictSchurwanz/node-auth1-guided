@@ -1,6 +1,7 @@
 function restrict(req, res, next) {
   // 150 lines of code
-  clog
+  console.log('restrict midd is kicking in!')
+  next()
 }
 
 module.exports = {
