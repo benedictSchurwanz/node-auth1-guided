@@ -20,7 +20,7 @@ server.use(session({
     httpOnly: false // httpOnly true means the JavaScript cannot read cookie
   },
   resave: false, // not important
-  saveUninitialized: false, // sessions don't get stored on the server by default, we have to "cause it" to happen in the code
+  saveUninitialized: false, // sessions false don't get stored on the server by default, we have to "cause it" to happen in the code GDPR
 }))
 server.use(express.json())
 
