@@ -13,7 +13,7 @@ server.use(express.static(path.join(__dirname, '../client')))
 // server.use(helmet()) // just turning on for fewer headers
 server.use(session({
   name: 'monkey',
-  secret: 'keep it secret, keep it safe' // this should be in process.env NOT hardcoded here!!!
+  secret: process.env.SESSION_SECRET || 'keep it secret, keep it safe' // this should be in process.env NOT hardcoded here!!!
 }))
 server.use(express.json())
 
