@@ -50,7 +50,9 @@ router.post('/login', async (req, res, next) => {
 
 router.get('/logout', async (req, res, next) => {
   try {
-    res.json('logout wired')
+    if (req.session.user) {
+      
+    }
   } catch (err) {
     next(err)
   }
