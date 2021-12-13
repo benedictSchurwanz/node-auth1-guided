@@ -52,7 +52,9 @@ router.get('/logout', async (req, res, next) => {
   try {
     if (req.session.user) {
       req.session.destroy((err) => {
-        
+        if (err) {
+          res.json('')
+        }
       })
     } else {
       res.json('sorry but I do not know you!')
