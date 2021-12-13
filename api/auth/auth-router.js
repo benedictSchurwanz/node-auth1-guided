@@ -7,6 +7,7 @@ router.post('/register', async (req, res, next) => {
     // 1- pull u and p from req.body
     // 2- create a hash off of the password
     // 3- we will store u and hash to the db
+    const {  }
     res.json('register wired!')
   }  catch (err) {
     next(err)
