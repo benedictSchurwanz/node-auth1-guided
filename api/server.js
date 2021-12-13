@@ -22,7 +22,9 @@ server.use(session({
   resave: false, // not important
   saveUninitialized: false, // sessions false don't get stored on the server by default, we have to "cause it" to happen in the code GDPR
   store: new Store({
-    knex: 
+    knex: require('../database/db-config'),
+    tablename: 'sessions',
+    
   })
 }))
 server.use(express.json())
