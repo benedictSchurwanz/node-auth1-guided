@@ -4,7 +4,7 @@ const router = express.Router()
 
 router.post('/register', async (req, res, next) => {
   try {
-    
+    res.json('')
   }  catch (err) {
     next(err)
   }
@@ -12,7 +12,7 @@ router.post('/register', async (req, res, next) => {
 
 router.post('/login', async (req, res, next) => {
   try {
-    
+    res.json('')
   } catch (err) {
     next(err)
   }
@@ -20,7 +20,7 @@ router.post('/login', async (req, res, next) => {
 
 router.get('/logout', async (req, res, next) => {
   try {
-    
+    res.json('')
   } catch (err) {
     next(err)
   }
