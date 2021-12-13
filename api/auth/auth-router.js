@@ -36,7 +36,7 @@ router.post('/login', async (req, res, next) => {
       return next({ message: 'invalid credentials', status: 401 })
     }
     res.json({
-      message: `welcome back ${}`
+      message: `welcome back ${username}`
     })
     // 5- start a session with the logged-in user
   } catch (err) {
