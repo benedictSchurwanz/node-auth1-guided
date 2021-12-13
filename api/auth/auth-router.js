@@ -51,7 +51,9 @@ router.post('/login', async (req, res, next) => {
 router.get('/logout', async (req, res, next) => {
   try {
     if (req.session.user) {
-      // let's log them out!
+      req.session.destroy((err) => {
+        
+      })
     } else {
       res.json('sorry but I do not know you!')
     }
