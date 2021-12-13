@@ -16,7 +16,8 @@ server.use(session({
   secret: process.env.SESSION_SECRET || 'keep it secret, keep it safe',
   cookie: {
     maxAge: 1000 * 60 * 60,
-    secure: false // secure means, the session only works on https
+    secure: false // secure true means, the session only works on https
+    httpOnly: false // httpOnly true means the JavaScript cannot read cookie
   }
 }))
 server.use(express.json())
