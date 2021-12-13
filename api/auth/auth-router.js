@@ -1,3 +1,7 @@
 const express = require('express')
 
-const router = exp
+const router = express.Router()
+
+
+
+module.exports = router
