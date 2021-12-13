@@ -32,7 +32,7 @@ router.post('/login', async (req, res, next) => {
     }
     const verifies = bcryptjs.compareSync(password, userFromDb.password)
     if (!verifies) {
-      
+      // 
     }
     // 3- recreate the hash using password from req.body
     // 4- compare this agains the hash in the dabase
