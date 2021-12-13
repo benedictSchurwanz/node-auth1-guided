@@ -26,7 +26,7 @@ server.use(session({
     tablename: 'sessions',
     sidfieldname: 'sid',
     createtable: true,
-    clearInterval: 1000 * 60 * 
+    clearInterval: 1000 * 60 * 60,
   })
 }))
 server.use(express.json())
