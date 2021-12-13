@@ -19,7 +19,8 @@ server.use(session({
     secure: false, // secure true means, the session only works on https
     httpOnly: false // httpOnly true means the JavaScript cannot read cookie
   },
-  resave
+  resave: false, // not important
+  saveUninitialized: true, // 
 }))
 server.use(express.json())
 
