@@ -13,7 +13,9 @@ router.post('/register', async (req, res, next) => {
       username,
       password: bcrypt.hashSync(password, 8), // 2^8 rounds
     }
+    console.log(newUser)
     const created = await User.add(newUser)
+    console.log(created)
     res.status(201).json(created)
   }  catch (err) {
     next(err)
