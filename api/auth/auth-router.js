@@ -55,6 +55,7 @@ router.get('/logout', async (req, res, next) => {
         if (err) {
           res.json('you cannot leave, sorry!')
         } else {
+          // manually set a cookie with an exp date in the past
           res.json('goodbye')
         }
       })
