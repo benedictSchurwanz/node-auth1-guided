@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const helmet = require('helmet')
 
+const authRouter = require('./auth/auth-router')
 const usersRouter = require('./users/users-router.js')
 
 const server = express()
@@ -11,6 +12,7 @@ server.use(helmet())
 server.use(express.json())
 
 server.use('/api/users', usersRouter)
+server.use('/api/auth')
 
 server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'))
