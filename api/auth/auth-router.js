@@ -26,6 +26,8 @@ router.post('/login', async (req, res, next) => {
     const { username, password } = req.body
     // 2- pull the user using the username
     // 3- recreate the hash using password from req.body
+    // 4- compare this agains the hash in the dabase
+    // 5- 
     res.json('login wired')
   } catch (err) {
     next(err)
