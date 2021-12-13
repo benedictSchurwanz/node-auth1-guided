@@ -37,7 +37,8 @@ router.post('/login', async (req, res, next) => {
     }
     // 5- start a session with the logged-in user
     // by writing something to the req.session
-    // 1
+    // 1- a session gets created
+    // 2- a SET-COOKIE header gets tacked to the response (with session ID)
     req.session.user = userFromDb
     res.json({
       message: `welcome back ${username}`
