@@ -35,10 +35,11 @@ router.post('/login', async (req, res, next) => {
     if (!verifies) {
       return next({ message: 'invalid credentials', status: 401 })
     }
+    // 5- start a session with the logged-in user
+    req.session.user = userFromDb
     res.json({
       message: `welcome back ${username}`
     })
-    // 5- start a session with the logged-in user
   } catch (err) {
     next(err)
   }
