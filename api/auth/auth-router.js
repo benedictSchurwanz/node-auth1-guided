@@ -25,6 +25,7 @@ router.post('/login', async (req, res, next) => {
     // 1- pull u and p from req.body
     const { username, password } = req.body
     // 2- pull the user using the username
+    const userFromDb = await User.findBy
     // 3- recreate the hash using password from req.body
     // 4- compare this agains the hash in the dabase
     // 5- start a session with the logged-in user
