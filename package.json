@@ -10,6 +10,7 @@
     "seed": "knex seed:run"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "knex": "^0.95.14",
