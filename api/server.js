@@ -15,7 +15,8 @@ server.use(session({
   name: 'monkey',
   secret: process.env.SESSION_SECRET || 'keep it secret, keep it safe',
   cookie: {
-    maxAge: 1000 * 
+    maxAge: 1000 * 60 * 60,
+    secure: 
   }
 }))
 server.use(express.json())
