@@ -24,7 +24,9 @@ server.use(session({
   store: new Store({
     knex: require('../database/db-config'),
     tablename: 'sessions',
-    
+    sidfieldname: 'sid',
+    createtable: true,
+    clearInterval: 1000 * 60 * 
   })
 }))
 server.use(express.json())
