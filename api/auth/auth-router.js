@@ -2,6 +2,7 @@ const express = require('express')
 const bcrypt = require('bcryptjs')
 const router = express.Router()
 const User = require('../users/users-model')
+const bcryptjs = require('bcryptjs')
 
 router.post('/register', async (req, res, next) => {
   try {
@@ -29,6 +30,7 @@ router.post('/login', async (req, res, next) => {
     if (!userFromDb) {
       return next({ message: 'invalid credentials', status: 401 })
     }
+    const verifies = bcryptjs.compareSync()
     // 3- recreate the hash using password from req.body
     // 4- compare this agains the hash in the dabase
     // 5- start a session with the logged-in user
