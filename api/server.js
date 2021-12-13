@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const session = require('express-session')
 const Store = require('connect-session-knex')(session)
-const helmet = require('helmet')
+const helmet = require('helmet') // put it back!
 
 const authRouter = require('./auth/auth-router')
 const usersRouter = require('./users/users-router.js')
