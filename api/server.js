@@ -11,7 +11,9 @@ const server = express()
 
 server.use(express.static(path.join(__dirname, '../client')))
 // server.use(helmet()) // just turning on for fewer headers
-
+server.use(session({
+  
+}))
 server.use(express.json())
 
 server.use('/api/users', usersRouter)
