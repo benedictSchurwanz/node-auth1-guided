@@ -1,5 +1,5 @@
 const express = require('express')
-
+const bcrypt = require('bcryptjs')
 const router = express.Router()
 
 router.post('/register', async (req, res, next) => {
@@ -10,7 +10,7 @@ router.post('/register', async (req, res, next) => {
     const { username, password } = req.body
     const newUser = {
       username,
-      password,
+      password: ,
     }
     res.json('register wired!')
   }  catch (err) {
