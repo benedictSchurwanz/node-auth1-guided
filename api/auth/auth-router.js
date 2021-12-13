@@ -31,7 +31,9 @@ router.post('/login', async (req, res, next) => {
       return next({ message: 'invalid credentials', status: 401 })
     }
     const verifies = bcryptjs.compareSync(password, userFromDb.password)
-    
+    if (!verifies) {
+      
+    }
     // 3- recreate the hash using password from req.body
     // 4- compare this agains the hash in the dabase
     // 5- start a session with the logged-in user
