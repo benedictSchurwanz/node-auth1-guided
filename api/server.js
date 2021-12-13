@@ -12,7 +12,7 @@ const server = express()
 server.use(express.static(path.join(__dirname, '../client')))
 // server.use(helmet()) // just turning on for fewer headers
 server.use(session({
-  
+  name: 'monkey',
 }))
 server.use(express.json())
 
