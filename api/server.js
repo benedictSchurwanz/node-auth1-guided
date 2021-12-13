@@ -21,6 +21,7 @@ server.use(session({
   },
   resave: false, // not important
   saveUninitialized: false, // sessions false don't get stored on the server by default, we have to "cause it" to happen in the code GDPR
+  rolling: true,
   store: new Store({
     knex: require('../database/db-config'),
     tablename: 'sessions',
