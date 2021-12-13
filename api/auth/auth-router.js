@@ -22,6 +22,8 @@ router.post('/register', async (req, res, next) => {
 
 router.post('/login', async (req, res, next) => {
   try {
+    // 1- pull u and p from req.body
+    const { username, password } = req.body
     res.json('login wired')
   } catch (err) {
     next(err)
