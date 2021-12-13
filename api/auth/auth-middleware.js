@@ -1,6 +1,6 @@
 function restrict(req, res, next) {
- // 50 lines of code
- 
+  // 150 lines of code
+  clog
 }
 
 module.exports = {
