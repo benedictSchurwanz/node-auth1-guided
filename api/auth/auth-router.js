@@ -24,6 +24,8 @@ router.post('/login', async (req, res, next) => {
   try {
     // 1- pull u and p from req.body
     const { username, password } = req.body
+    // 2- pull the user using the username
+    // 3- recreate the hash using password from req.body
     res.json('login wired')
   } catch (err) {
     next(err)
