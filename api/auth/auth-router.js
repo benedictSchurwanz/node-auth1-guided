@@ -10,7 +10,7 @@ router.post('/register', async (req, res, next) => {
     const { username, password } = req.body
     const newUser = {
       username,
-      password: bcrypt.hashSync(),
+      password: bcrypt.hashSync(password, 8),
     }
     res.json('register wired!')
   }  catch (err) {
