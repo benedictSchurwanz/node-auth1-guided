@@ -8,7 +8,7 @@ const usersRouter = require('./users/users-router.js')
 const server = express()
 
 server.use(express.static(path.join(__dirname, '../client')))
-server.use(helmet())
+// server.use(helmet())
 server.use(express.json())
 
 server.use('/api/users', usersRouter)
