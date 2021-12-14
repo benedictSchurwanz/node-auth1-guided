@@ -5,14 +5,14 @@ const User = require('../users/users-model')
 
 router.post('/register', async (req, res, next) => {
   try {
-    // 1- pull u and p from req.body
-    // 2- create a hash off of the password
-    // 3- we will store u and hash to the db
+    // 1- pull username and password from req.body
     const { username, password } = req.body
     const newUser = {
       username,
+      // 2- create a hash off of the password
       password: bcrypt.hashSync(password, 8), // 2^8 rounds
     }
+    // 3- we will store username and hash to the db
     const created = await User.add(newUser)
     res.status(201).json({ username: created.username, id: created.id })
   } catch (err) {
